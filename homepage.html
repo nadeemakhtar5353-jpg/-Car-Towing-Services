@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyadh Towing - سطحة الرياض | 24/7 Car Towing & Vehicle Recovery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #ffd700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e3c72;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+.hero {
+    background:
+        linear-gradient(
+            rgba(30, 60, 114, 0.7),
+            rgba(42, 82, 152, 0.7)
+        ),
+        url("images/carriyadhpic1.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 150px 2rem 100px;
+        text-align: center;
+        margin-top: 70px;
+      }
+
+         /* .hero {
+                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                  url("../download/carriyadhpic1.jpeg");
+      
+                /* url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231e3c72" width="1200" height="600"/><path fill="%232a5298" d="M0 300L50 283.3C100 266.7 200 233.3 300 216.7C400 200 500 200 600 216.7C700 233.3 800 266.7 900 283.3C1000 300 1100 300 1150 300L1200 300L1200 600L1150 600C1100 600 1000 600 900 600C800 600 700 600 600 600C500 600 400 600 300 600C200 600 100 600 50 600L0 600Z"/></svg>'); */
+                /* background-size: cover;
+                background-position: center;
+                color: white;
+                padding: 150px 2rem 100px;
+                text-align: center;
+                margin-top: 70px;
+            } */ 
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.5);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 2rem;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .service-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 2rem;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #ffd700;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Coverage Section */
+        /* .coverage {
+            padding: 80px 2rem;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+        } */
+.coverage {
+    padding: 80px 2rem;
+    background:
+        linear-gradient(
+            rgba(30, 60, 114, 0.8),
+            rgba(42, 82, 152, 0.8)
+        ),
+        url("images/carriyadhpic4.jpeg"); /* image path */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+        .coverage-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .coverage h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .contact {
+            padding: 80px 2rem;
+            background: #f8f9fa;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .contact-card h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+     /* .footer-content {
+         max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+          background:
+          linear-gradient(
+                 rgba(30, 60, 114, 0.8),
+                 rgba(42, 82, 152, 0.8)
+                ),
+                url("images/carriyadhpic8.jpeg"); /* your image */
+
+            /* background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ccc;
+            padding: 3rem 2rem 1rem;
+        }  */
+  /* Floating Assistant Container */
+#assistant {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 9999;
+
+    /* Floating animation */
+    animation: float 3s ease-in-out infinite;
+
+    /* Shadow for 3D effect */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icon Image Styling */
+#assistant img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Hover Animation: grows and shadow effect */
+    #assistant:hover {
+        transform: scale(1.15);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+    }
+
+    /* Optional: Pulse effect behind the icon */
+    #assistant::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 120%;
+        height: 120%;
+        background: rgba(255, 215, 0, 0.4);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        animation: pulse 2s infinite;
+        z-index: -1;
+    }
+
+    @keyframes pulse {
+        0%   { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+        50%  { transform: translate(-50%, -50%) scale(1.2); opacity: 0.3; }
+        100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+    }
+
+
+
+        .footer-section h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #1e3c72;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s;
+            }
+
+            nav.active {
+                max-height: 400px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0;
+            }
+
+            nav li {
+                padding: 0.5rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">🚗</div>
+                <span>Riyadh Towing</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#features">Why Us</a></li>
+                    <li><a href="#coverage">Coverage</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Fast & Reliable Car Towing Services in Riyadh</h1>
+        <p>سطحة الرياض - Professional vehicle recovery and roadside assistance available 24/7 across Riyadh</p>
+        <a href="#contact" class="cta-button">Call Us Now 📞</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚛</div>
+                    <h3>Emergency Towing</h3>
+                    <p>Quick response towing service for breakdowns, accidents, and vehicle emergencies anywhere in Riyadh</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Roadside Assistance</h3>
+                    <p>On-site support including battery jumps, tire changes, fuel delivery, and minor repairs</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚙</div>
+                    <h3>Vehicle Recovery</h3>
+                    <p>Safe recovery of vehicles from accidents, ditches, or difficult terrain with specialized equipment</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📍</div>
+                    <h3>GPS-Guided Service</h3>
+                    <p>GPS-equipped tow trucks ensure the fastest route to your location for rapid assistance</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Commercial Towing</h3>
+                    <p>Heavy-duty towing for commercial vehicles, trucks, and fleet services with licensed operators</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Residential Areas</h3>
+                    <p>Complete coverage across all residential districts, major roads, and remote areas of Riyadh</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Riyadh Towing?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <div>
+                        <h3>Fast Response</h3>
+                        <p>Quick dispatch and arrival times across all areas of Riyadh</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div>
+                        <h3>Licensed Operators</h3>
+                        <p>Fully trained and certified professionals handling your vehicle</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌙</div>
+                    <div>
+                        <h3>24/7 Availability</h3>
+                        <p>Round-the-clock service every day of the year</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <div>
+                        <h3>Safe Handling</h3>
+                        <p>Professional equipment and techniques to protect your vehicle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="coverage" id="coverage">
+        <div class="coverage-content">
+            <h2>Citywide Coverage Across Riyadh</h2>
+            <p>Our expanding fleet operates throughout Riyadh, ensuring timely assistance in high-demand areas, residential neighborhoods, major highways, and remote locations. Whether you're in the city center or on the outskirts, we're ready to help you get back on the road with confidence and peace of mind.</p>
+            <p style="margin-top: 2rem; font-size: 1.2rem; font-weight: bold;">We serve all districts and areas of Riyadh - No location too far!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+966535732512">+966535732512</a></p>
+                    <p>Available 24/7</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:info@riyadhtowing.com">info@riyadhtowing.com</a></p>
+                    <p>We'll respond quickly</p>
+                </div>
+                <div class="contact-card">
+                    <div  class="contact-icon">📍x  </div>
+                    <h3>Service Area</h3>
+                    <p>All of Riyadh City</p>
+                    <p>GPS-guided dispatch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<div id="assistant">
+    <img src="images/assistant.png" alt="Assistant">
+</div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Riyadh Towing</h3>
+                <p>Professional car towing and vehicle recovery services serving Riyadh since [year]. Your trusted partner on the road.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#features">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li>Emergency Towing</li>
+                    <li>Roadside Assistance</li>
+                    <li>Vehicle Recovery</li>
+                    <li>Commercial Towing</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Phone: +966535732512</p>
+                <p>Email: info@riyadhtowing.com</p>
+                <p>Service: 24/7 All Riyadh</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Riyadh Towing - سطحة الرياض. All rights reserved. | Professional Towing Services in Riyadh</p>
+        </div>
+    </footer>
+
+    <script>
+document.getElementById("assistant").addEventListener("click", function () {
+    // Replace with your WhatsApp number in international format
+    const phoneNumber = "+966535732512";
+    const message = "Hello! I want to know more about your services."; // Optional pre-filled message
+
+    // WhatsApp Web URL
+    const url = `https://wa.me/${phoneNumber.replace(/\+/g,'')}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+});
+
+            // document.getElementById("assistant").addEventListener("click", function () {
+            //     window.location.href = "https://your-website.com"; 
+            // });
+
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mainNav').classList.remove('active');
+                }
+            });
+        });
+
+        // Header scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.background = 'rgba(30, 60, 114, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
