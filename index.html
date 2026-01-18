@@ -339,12 +339,75 @@
                 ),
                 url("images/carriyadhpic8.jpeg"); /* your image */
 
-            background-size: cover;
+            /* background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             color: #ccc;
             padding: 3rem 2rem 1rem;
-        } */
+        }  */
+  /* Floating Assistant Container */
+#assistant {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 9999;
+
+    /* Floating animation */
+    animation: float 3s ease-in-out infinite;
+
+    /* Shadow for 3D effect */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icon Image Styling */
+#assistant img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Hover Animation: grows and shadow effect */
+    #assistant:hover {
+        transform: scale(1.15);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+    }
+
+    /* Optional: Pulse effect behind the icon */
+    #assistant::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 120%;
+        height: 120%;
+        background: rgba(255, 215, 0, 0.4);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        animation: pulse 2s infinite;
+        z-index: -1;
+    }
+
+    @keyframes pulse {
+        0%   { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+        50%  { transform: translate(-50%, -50%) scale(1.2); opacity: 0.3; }
+        100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+    }
+
+
 
         .footer-section h3 {
             color: #ffd700;
@@ -551,7 +614,9 @@
             </div>
         </div>
     </section>
-
+<div id="assistant">
+    <img src="images/assistant.png" alt="Assistant">
+</div>
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -590,6 +655,21 @@
     </footer>
 
     <script>
+document.getElementById("assistant").addEventListener("click", function () {
+    // Replace with your WhatsApp number in international format
+    const phoneNumber = "+966535732512";
+    const message = "Hello! I want to know more about your services."; // Optional pre-filled message
+
+    // WhatsApp Web URL
+    const url = `https://wa.me/${phoneNumber.replace(/\+/g,'')}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+});
+
+            // document.getElementById("assistant").addEventListener("click", function () {
+            //     window.location.href = "https://your-website.com"; 
+            // });
+
         function toggleMenu() {
             const nav = document.getElementById('mainNav');
             nav.classList.toggle('active');
